@@ -10,6 +10,7 @@ from aws_cdk import core as cdk
 from aws_cdk import core
 
 from cicd_pipeline_vpc.cicd_pipeline_vpc_stack import CicdPipelineVpcStack
+from cicd_pipeline_vpc.pipeline_stack import PipelineStack
 
 
 app = core.App()
@@ -30,5 +31,7 @@ CicdPipelineVpcStack(app, "CicdPipelineVpcStack",
 
     # For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
     )
+PipelineStack(app, "PipelineStack",
+        )
 
 app.synth()
